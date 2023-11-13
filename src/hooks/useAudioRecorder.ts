@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useCallback } from "react";
 
 export interface recorderControls {
@@ -41,7 +40,8 @@ export type MediaAudioTrackConstraints = Pick<
  */
 const useAudioRecorder: (
   audioTrackConstraints?: MediaAudioTrackConstraints,
-  onNotAllowedOrFound?: (exception: DOMException) => unknown,
+  //eslint-disable-next-line 
+  onNotAllowedOrFound?: (exception: DOMException) => any,
   mediaRecorderOptions?: MediaRecorderOptions
 ) => recorderControls = (
   audioTrackConstraints,
@@ -52,7 +52,7 @@ const useAudioRecorder: (
   const [isPaused, setIsPaused] = useState(false);
   const [recordingTime, setRecordingTime] = useState(0);
   const [mediaRecorder, setMediaRecorder] = useState<MediaRecorder>();
-  const [timerInterval, setTimerInterval] = useState<NodeJS.Timeout>();
+  const [timerInterval, setTimerInterval] = useState<number>();
   const [recordingBlob, setRecordingBlob] = useState<Blob>();
 
   const _startTimer: () => void = useCallback(() => {
