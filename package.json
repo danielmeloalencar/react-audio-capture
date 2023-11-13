@@ -1,7 +1,7 @@
 {
   "name": "react-audio-capture",
   "private": false,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "author": {
     "name": "Daniel Melo Alencar",
