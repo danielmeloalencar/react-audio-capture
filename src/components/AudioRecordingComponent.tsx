@@ -88,7 +88,7 @@ const AudioRecorder: (props: Props) => ReactElement = ({
             </Suspense>
           )}
         </span>
-    </>:null
+    </>:<>NONE</>
   );
 };
 
